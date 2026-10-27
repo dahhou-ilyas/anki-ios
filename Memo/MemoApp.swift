@@ -42,7 +42,10 @@ struct RootView: View {
             OnboardingView()
                 .interactiveDismissDisabled()
         }
-        .task { await Reminders.refresh(context: context) }
+        .task {
+            StarterDeck.install(into: context)
+            await Reminders.refresh(context: context)
+        }
         .onChange(of: scenePhase) { _, phase in
             // Met à jour le badge et les rappels en quittant / en revenant dans l'app.
             if phase != .inactive {

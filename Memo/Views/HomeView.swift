@@ -186,7 +186,6 @@ private struct HomeContent: View {
         } actions: {
             Button("Créer mon premier paquet") { showingNewDeck = true }
                 .buttonStyle(.borderedProminent)
-            Button("Essayer avec un paquet d'exemple") { SampleData.insert(into: context) }
         }
         .padding(.top, 60)
     }

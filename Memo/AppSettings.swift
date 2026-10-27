@@ -1,5 +1,4 @@
 import Foundation
-import SwiftData
 
 enum AppSettings {
     enum Key {
@@ -51,29 +50,5 @@ enum AppSettings {
         text.split(whereSeparator: { " ,;".contains($0) })
             .compactMap { Double($0) }
             .filter { $0 > 0 }
-    }
-}
-
-enum SampleData {
-    static func insert(into context: ModelContext) {
-        let deck = Deck(name: "Exemple — Capitales")
-        context.insert(deck)
-        let pairs = [
-            ("Capitale du Japon ?", "Tokyo"),
-            ("Capitale du Canada ?", "Ottawa"),
-            ("Capitale de l'Australie ?", "Canberra"),
-            ("Capitale du Maroc ?", "Rabat"),
-            ("Capitale du Brésil ?", "Brasília"),
-            ("Capitale de l'Égypte ?", "Le Caire"),
-            ("Capitale de la Norvège ?", "Oslo"),
-            ("Capitale de la Turquie ?", "Ankara"),
-        ]
-        let now = Date.now
-        for (index, pair) in pairs.enumerated() {
-            let card = Card(front: pair.0, back: pair.1, createdAt: now.addingTimeInterval(Double(index) / 1000))
-            context.insert(card)
-            card.deck = deck
-        }
-        try? context.save()
     }
 }

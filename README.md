@@ -89,6 +89,15 @@ Reviews done late are taken into account. New cards are limited to 20 per deck p
 
 With a free Apple account, apps installed this way expire after 7 days. Press **Run** again to reinstall: your cards and progress are kept.
 
+## The "Patterns" deck
+
+The app ships with a **Patterns** deck: one card per coding problem solved (NeetCode 150).
+
+- **Front:** the problem statement in one sentence.
+- **Back:** the pattern first, then the key idea in two lines. Never code.
+
+To add newly solved problems, either add cards in the app, or add entries to `Memo/StarterDeck.swift` with a new `id`. On the next launch, only cards that were never imported are added, so nothing is duplicated and a card you delete in the app does not come back.
+
 ## Project structure
 
 ```
@@ -99,7 +108,8 @@ Memo/                     The app
 ├── Reminders.swift         Local notifications and app badge
 ├── WidgetSync.swift        Writes the widget's data to the shared App Group
 ├── Backup.swift            JSON export / restore
-├── AppSettings.swift       Settings and sample deck
+├── AppSettings.swift       Settings
+├── StarterDeck.swift       Built-in "Patterns" deck: one card per solved coding problem
 └── Views/                  SwiftUI screens
 MemoWidget/               Home screen and lock screen widget
 Shared/                   Code shared by the app and the widget

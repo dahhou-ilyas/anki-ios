@@ -7,7 +7,6 @@ struct OnboardingView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage(AppSettings.Key.hasOnboarded) private var hasOnboarded = false
     @AppStorage(AppSettings.Key.remindersEnabled) private var remindersEnabled = false
-    @State private var addSample = true
 
     var body: some View {
         VStack(spacing: 28) {
@@ -43,9 +42,6 @@ struct OnboardingView: View {
             Spacer(minLength: 12)
 
             VStack(spacing: 12) {
-                Toggle("Ajouter un paquet d'exemple", isOn: $addSample)
-                    .padding(.horizontal, 4)
-
                 Button {
                     Task { await finish(enableReminders: true) }
                 } label: {
@@ -67,10 +63,6 @@ struct OnboardingView: View {
     }
 
     private func finish(enableReminders: Bool) async {
-        if addSample {
-            let existing = (try? context.fetchCount(FetchDescriptor<Deck>())) ?? 0
-            if existing == 0 { SampleData.insert(into: context) }
-        }
         if enableReminders {
             remindersEnabled = await Reminders.requestAuthorization()
         }

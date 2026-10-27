@@ -35,8 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA0000000000000000000010 /* MemoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MemoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000000001 /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000010 /* MemoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MemoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -298,7 +298,7 @@
 				CODE_SIGN_ENTITLEMENTS = Config/Memo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5ZGWSNM44F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/Memo-Info.plist";
@@ -328,7 +328,7 @@
 				CODE_SIGN_ENTITLEMENTS = Config/Memo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5ZGWSNM44F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/Memo-Info.plist";
@@ -356,7 +356,7 @@
 				CODE_SIGN_ENTITLEMENTS = Config/MemoWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5ZGWSNM44F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mémo";
@@ -381,7 +381,7 @@
 				CODE_SIGN_ENTITLEMENTS = Config/MemoWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5ZGWSNM44F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mémo";
